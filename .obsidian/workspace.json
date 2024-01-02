@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "97da65746b685785",
+    "type": "split",
+    "children": [
+      {
+        "id": "989c98c36c8c7cc8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bcc939bdd7eb6e94",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b7dc87069f3572db",
+    "type": "split",
+    "children": [
+      {
+        "id": "44c93e88a0050c7e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5a8313d1f921a5f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d08dec473a75a861",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "57133fada0e059ce",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9744cad2c5d6b405",
+    "type": "split",
+    "children": [
+      {
+        "id": "193c31a8c723b613",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f264e08aa6c224f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6d9a33b058920094",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "49bd43d1eab2e43c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a41af22c61ba2200",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "c34e234c84ad4a32",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "obsidian-projects:Open projects": false
+    }
+  },
+  "active": "c34e234c84ad4a32",
+  "lastOpenFiles": [
+    "learn_note",
+    "프로그래밍언어/JAVA/기본 클래스 구조.md",
+    "클래스.md",
+    "리소스/JAVA 메모리 영역구분.png",
+    "TODO/someday..",
+    "TODO/weekly",
+    "TODO/daily",
+    "TODO",
+    "daily/2024-01-02 TODOList.md",
+    "daily",
+    "일기장/2024/2024-01-01.md",
+    "올해의 말씀.png",
+    "일기장/2024",
+    "다이나믹 프로그래밍.md",
+    "2023-12-22.md",
+    "추상화.md",
+    "무제 파일.md",
+    "Untitled.canvas",
+    "Untitled 2.canvas",
+    "일기장/2023/12/2023-12-30.md",
+    "일기장/2023/12/2023-12-16.md",
+    "프로그래밍언어/JAVA/배열.md",
+    "프로그래밍언어/JAVA/자바 메모리관리.md",
+    "프로그래밍언어/JAVA/자바언어 시작하기.md",
+    "프로그래밍언어/JAVA/패키지와 제어자.md",
+    "프로그래밍언어/JAVA/추상클래스와 인터페이스.md",
+    "Untitled 1.canvas",
+    "프로그래밍언어/JAVA/Untitled.md",
+    "프로그래밍언어/JAVA/상속과 오버라이딩.md",
+    "프로그래밍언어/JAVA/객체지향.md",
+    "프로그래밍언어/JAVA/I O 개요.md",
+    "리소스",
+    "프로그래밍언어/관련문서/클래스타입 자료형.md",
+    "프로그래밍언어/관련문서",
+    "프로그래밍언어/JAVA",
+    "프로그래밍언어",
+    "recurit/다우/본인이 회사를 선택하는 기준을 바탕으로 우리 회사를 선택한 이유를 작성해주세요.md",
+    "일기장/2023/12/2023-12-14.md",
+    "일기장/2023/12/2023-12-13.md",
+    "일기장/2023/12/2023-12-11.md",
+    "recurit/다우/면접/자기소개.md",
+    "무제 파일.canvas"
+  ]
+}

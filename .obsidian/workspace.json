@@ -65,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 298
   },
   "right": {
     "id": "9744cad2c5d6b405",
@@ -148,7 +148,7 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "c34e234c84ad4a32",
+  "active": "a5a8313d1f921a5f",
   "lastOpenFiles": [
     "learn_note",
     "프로그래밍언어/JAVA/기본 클래스 구조.md",

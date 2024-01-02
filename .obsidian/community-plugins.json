@@ -1,5 +1,4 @@
 [
-  "obsidian-git",
   "calendar",
   "periodic-notes",
   "better-reading-mode",
@@ -9,5 +8,7 @@
   "copy-document-as-html",
   "obsidian-projects",
   "code-emitter",
-  "obsidian-tasks-plugin"
+  "obsidian-tasks-plugin",
+  "dataview",
+  "obsidian-git"
 ]

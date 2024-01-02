@@ -35,7 +35,7 @@ DNS도 일종의 서버 형태일 것이고, domain을 요청하면 ip형태로 
 
 ## 분산서버 구조
 
-![[DNS계층트리.png]]
+![DNS계층트리.png](../리소스/DNS계층트리.png)
 [원문 CloudFare](https://www.cloudflare.com/ko-kr/learning/dns/glossary/dns-root-server/)
 
 위의 사진을 보자. 가장 큰 Root로부터, Tree구조를 가지며 하위로 갈수록 세부 도메인 주소를 표현한다.
@@ -69,14 +69,14 @@ Authoriatative Name Server의 주소를 저장하고있다.
 ## 1. 반복적인 질의(iterative query)
 로컬 DNS 서버가 Root DNS Server로부터 응답을 받고 TLD DNS 서버에 다시 질의를 하여 Authoritative DNS Server의 주소를 가져온다. 최종적으로 Authoritative DNS Server에게 도메인 주소를 질의하여 IP를 가져온다. 
 
-![[반복적질의.png]]
+![반복적질의.png](../리소스/반복적질의.png)
 보면 Local DNS 서버가 직접 서버별로 질의를 하여 최종적으로 호스트에게 IP주소를 전달한다.
 
 이럴 경우 Root DNS Server, TLD DNS Server, Authoritative DNS Server는 서로 통신하지 않으므로 각각이 가진 정보를 공유할 수 없다.
 
 즉, **Local DNS Server를 제외하고는 도메인 정보를 캐시할 수 없다!**
 ## 2. 재귀적 질의(recursive query)
-![[재귀적질의.png]]
+![재귀적질의.png](../리소스/재귀적질의.png)
 반복적 질의와 다르게 Local DNS Server가 Root DNS Server로 요청을 던지면 Root는 TLD에게 TLD는 Auth서버에게 응답을 요청하고 다시 재귀적으로 응답을 받게된다.
 
 반복적인 질의는 Local Server가 한명한명 물어가며 정보를 가져왔다면, 재귀적 질의는 한명에게 물어보고 취합된 정보를 가져오는 방식이다.

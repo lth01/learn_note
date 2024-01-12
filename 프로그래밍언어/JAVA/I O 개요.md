@@ -17,6 +17,6 @@ BookUrl: https://dinfree.com/lecture/language/112_java_3.html#m1
 위의 객체는 각각 **java.io.InputStream**, **java.io.PrintStream** 클래스의 인스턴스임
 
 ### java.util.Scanner
-Scanner 클래스는 입력 [[스트림]]으로부터 데이터를 읽어오기 위한 유틸리티 클래스임
+Scanner 클래스는 입력 [[스트림-01]]으로부터 데이터를 읽어오기 위한 유틸리티 클래스임
 스트림을 정말 간략하게 설명하면, 입력 소스로부터 데이터를 전달하기 위한 추상화된 통로라고 볼 수 있음.
 

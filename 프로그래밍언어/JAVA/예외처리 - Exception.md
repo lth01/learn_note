@@ -113,3 +113,89 @@ try{
 이는 Exception1, Exception2 가 동일한 부모를 상속하고 있다면, 부모 예외만 핸들링할 수 있다.
 
 다만 컴파일러는 부모 클래스의 예외를 처리하면, 더이상 상속 계층에 있는 예외는 처리하지 않아도 된다 생각하므로, 반드시 하위 예외 클래스 -> 상위 예외 클래스로 예외문을 처리하자
+
+
+## try-with-resource
+우리가 BufferedReader로 파일을 읽어온다 했을때 아래와 같이 코드를 짤 수 있다.
+
+```java
+public static void main(String[] args){
+	try{
+		BufferedReader br = new BufferedReader(new FileReader(filePath));
+		br.readLine();
+		br.close();
+	}catch(IOException e){
+		%% do something %%
+	}finally{
+		
+	}
+}
+```
+
+하지만, BufferedReader객체가 생성될 때, readLine중 예외가 발생하면  br.close()는 호출되지 않을것이다.
+
+BufferedReader 객체는 생성되었을 때, 반드시 close()메서드가 호출되어야한다.
+
+그래서 아래처럼 코드를 바꿔보자
+```java
+public static void main(String[] args){
+	try{
+		BufferedReader br = new BufferedReader(new FileReader(filePath));
+		br.readLine();
+	}catch(IOException e){
+		%% do something %%
+	}finally{
+		br.close();
+		%%이 코드는 문제가 없을까? %%
+	}
+}
+```
+
+얼핏 보면 문제가 없어보이지만.. br.close()역시 예외처리가 필요하다.
+
+예외처리에 문제가 없으려면 아래와 같이 코드가 구성되어야한다.
+
+```java
+public static void main(String[] args){
+	try{
+		BufferedReader br = new BufferedReader(new FileReader(filePath));
+		br.readLine();
+	}catch(IOException e){
+	}finally{
+		if(br != null){
+			try{
+				br.close()
+			}catch(IOException e){
+			}
+		}
+	}
+}
+```
+
+BufferedReader 하나만 사용해도 이렇게 복잡한 코드가 나온다.
+- 이런 코드가 반복된다면 개발자가 파악해야할 핵심 로직보다, 예외처리로 인한 코드가 더 많아질 것이다. 이는 가독성의 문제를 야기한다.
+
+자바에서는 이런 문제를 해결하기 위해 try-with-resource라는 문법적 설탕을 제공한다
+
+try-with-resource를 사용하려면 이런식으로 작성해야한다.
+
+```java
+try(BufferedReader br = new BufferedReader(new FileReader(filePath))){
+
+}catch(Exception e){
+
+}
+```
+
+이렇게 호출하면 예외, 정상 실행 여부와 상관없이 try-catch문을 빠져나올때 br.close()를 자동으로 호출한다.
+
+#### 그러면 어떤 클래스를 try 조건문 안에 넣을 수 있을까?
+정렬의 Comparable 인터페이스와 비슷하게 close 추상 메서드를 가진 AutoClosable 인터페이스를 구현한 클래스를 넣을 수 있다.
+
+### try-with-resource의 실행 순서
+
+try-with-resource의 실행 순서는 아래와 같다.
+
+> 1. try 구문을 실행하다 예외를 만난다.
+> 2. catch로 넘기기 전 try() 조건문 내부에 생성된 객체의 close()를 호출한다.
+> 3.예외 처리 구문으로 넘어간다.
